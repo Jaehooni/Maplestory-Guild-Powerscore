@@ -132,7 +132,8 @@ function getGuid() {
 
 function getGuildMemberList(){
   const date = getDateInfo();
-  const context = `/maplestory/v1/guild/basic?oguild_id=4424c0538d132e2206f9b5e9cfc5b3e5&date=${date}`
+  const guid = getGuid();
+  const context = `/maplestory/v1/guild/basic?oguild_id=${guid}&date=${date}`
   const url = makeUrl(baseUrl, context);
   //console.log(url);
 
